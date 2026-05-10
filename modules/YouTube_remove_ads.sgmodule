@@ -1,0 +1,25 @@
+#!name=YouTube去广告
+#!desc=移除YouTube视频、瀑布流、搜索和Shorts中的广告，移除底栏的Shorts按钮和上传按钮等。此插件需要启用MitM over HTTP/2和QUIC回退保护。（已转换为 Surge 模块）
+#!author=Maasea, VirgilClyne, Choler, DivineEngine, app2smile
+#!system=iOS, iPadOS, macOS
+
+# 默认参数说明 (对应 argument 字段中的以逗号分隔的值)：
+# 1. blockUpload: "false" (隐藏上传按钮)
+# 2. blockShorts: "false" (隐藏Shorts按钮)
+# 3. blockImmersive: "false" (隐藏选段按钮)
+# 4. captionLang: "zh-Hans" (字幕翻译语言)
+# 5. lyricLang: "zh-Hans" (歌词翻译语言)
+# 6. debug: "false" (调试模式)
+
+[Rule]
+AND,((DOMAIN-SUFFIX,googlevideo.com),(PROTOCOL,QUIC)),REJECT
+AND,((DOMAIN-SUFFIX,youtubei.googleapis.com),(PROTOCOL,QUIC)),REJECT
+
+# 把 Loon 的 Rewrite 转为 Surge 的 URL-REGEX 规则处理拦截
+URL-REGEX,^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad,REJECT
+
+[Script]
+YT_RemoveAds = type=http-response, pattern="^https:\/\/youtubei\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch))(\?(.*))?$", requires-body=1, binary-body-mode=1, script-path=https://kelee.one/Resource/JavaScript/YouTube/YouTube_remove_ads/YouTube_remove_ads_response.js, argument="false,false,false,zh-Hans,zh-Hans,false"
+
+[MITM]
+hostname = %APPEND% *.googlevideo.com, youtubei.googleapis.com
