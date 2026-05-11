@@ -1,0 +1,47 @@
+#!name=京东
+#!desc=1.过滤京东广告；2.历史比价信息。（首次使用请先打开【慢慢买App-我的】，提示【获取ck成功🎉】即可正常比价。）
+#!author=RuCu6, Maasea, MuTu, 苍井灰灰, mw418, 可莉🅥
+#!icon=https://raw.githubusercontent.com/sooyaaabo/IconLibrary/main/App/Jingdong.png
+#!openUrl=https://apps.apple.com/app/id414245413
+#!category=去广告, 功能增强
+#!loon_version=3.3.9(945)
+#!homepage=https://hub.kelee.one
+#!date=2026-04-21 19:40
+#!arguments=Manmanbuy-Cookie:,JDPrice-Enable:
+#!arguments-desc=Manmanbuy-Cookie: [京东比价]获取慢慢买Cookie\n首次使用请先打开【慢慢买】APP，提示【获取ck成功🎉】即可正常比价。\n\nJDPrice-Enable: [京东比价]开启历史价格\n点击商品详情页即可直接查看历史价格。
+
+[Rule]
+# 拦截调试与诊断上报
+URL-REGEX,"^http:\/\/\w{32}\.jddebug\.com\/diagnose\?",REJECT
+
+[URL Rewrite]
+^http:\/\/\w{32}\.jddebug\.com\/diagnose\? - reject
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052 - reject
+
+[Body Rewrite]
+http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising jdLiteAdvertisingVO sooyaaabo
+http-response-jq ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=basicConfig 'if (getpath(["data","JDMessage","socketmonitor"]) | has("isSocketEstablishedAhead")) then (setpath(["data","JDMessage","socketmonitor","isSocketEstablishedAhead"]; 0)) else . end'
+http-response-jq ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=basicConfig 'if (getpath(["data","JDMessage","socketmonitor"]) | has("isSocketReport")) then (setpath(["data","JDMessage","socketmonitor","isSocketReport"]; 0)) else . end'
+http-response-jq ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=basicConfig 'if (getpath(["data","JDHttpToolKit","httpdns"]) | has("httpdns")) then (setpath(["data","JDHttpToolKit","httpdns","httpdns"]; 0)) else . end'
+
+[Map Local]
+# 去广告 URL 重写规则
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs data-type=text data=" " status-code=200
+
+^https:\/\/api\.m\.jd\.com\/\?loginType=11 data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:searchBoxWord|stationPullService|uniformRecommend[06]) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+[京东]移除广告 = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome), script-path=https://kelee.one/Resource/JavaScript/JD/JD_remove_ads.js, requires-body=true
+
+[京东]移除京东极速版广告 = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising, script-path=https://loon.103516.xyz/Script/CommonScript/replace-body.js, requires-body=true, argument=jdLiteAdvertisingVO -> sooyaaabo
+
+# 捕获慢慢买 Cookie
+{{{Manmanbuy-Cookie}}}[京东比价]获取慢慢买Cookie = type=http-request, pattern=^https?:\/\/apapia-sqk-weblogic\.manmanbuy\.com\/baoliao\/center\/menu$, script-path=https://kelee.one/Resource/JavaScript/JD/JD_Price.js, requires-body=true, timeout=10
+
+# 京东商品页显示比价 
+{{{JDPrice-Enable}}}[京东比价]详情页面显示 = type=http-response, pattern=^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html, script-path=https://kelee.one/Resource/JavaScript/JD/JD_Price.js, requires-body=true, timeout=10
+
+[MITM]
+hostname = %APPEND% api.m.jd.com, in.m.jd.com, apapia-sqk-weblogic.manmanbuy.com, m.360buyimg.com
