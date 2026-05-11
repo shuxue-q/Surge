@@ -1,1 +1,30 @@
 # Surge
+### 插件
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/12306.sgmodule?token=GHSAT0AAAAAAD3EHOXDJ57JWC3FHZIISYYY2QB2AAA
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/Amap_remove_ads.sgmodule?token=GHSAT0AAAAAAD3EHOXDUZCINWJGF2ZWSJQM2QBZ62A
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/AppleWeatherEnhancer.sgmodule?token=GHSAT0AAAAAAD3EHOXDXBW3FN5OPU2SEPX42QB2AIA
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/BaiduNetDisk_remove_ads.sgmodule?token=GHSAT0AAAAAAD3EHOXDNYAJCGUPUWULSME22QB2AUQ
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/Bilibili_remove_ads.sgmodule?token=GHSAT0AAAAAAD3EHOXDIEY34Q6XJ3S2FR642QB2A5A
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/BlockAdvertisers.sgmodule?token=GHSAT0AAAAAAD3EHOXDVTMOCP67IQDRO5MM2QB2BFQ
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/Block_HTTPDNS.sgmodule?token=GHSAT0AAAAAAD3EHOXCRLKKNRJEK347RYVI2QB2BOA
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/Cainiao_remove_ads.sgmodule?token=GHSAT0AAAAAAD3EHOXD6OCT7NPQ53IC6HPW2QB2BWQ
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/Damai_remove_ads.sgmodule?token=GHSAT0AAAAAAD3EHOXC2JWXBWCGTWRGJSSY2QB2B5Q
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/FleaMarket_remove_ads.sgmodule?token=GHSAT0AAAAAAD3EHOXDSNDJZHOYNMK5O2Q62QB2CEQ
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/FlightRadar24.sgmodule?token=GHSAT0AAAAAAD3EHOXCX4V526IZIEUMHNKK2QB2CKQ
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/Google.sgmodule?token=GHSAT0AAAAAAD3EHOXCIAQKSSDHKTICMBCG2QB2CRQ
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/JD.sgmodule?token=GHSAT0AAAAAAD3EHOXDH2COWEVRGOF3FT3I2QB2CZA
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/KuGou_remove_ads.sgmodule?token=GHSAT0AAAAAAD3EHOXDQCPACQ2XUZYMZ4PY2QB2DAA
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/PinDuoDuo.sgmodule?token=GHSAT0AAAAAAD3EHOXCGWJ6PVQVP2YJJKVA2QB2DHA
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/QQ_Redirect.sgmodule?token=GHSAT0AAAAAAD3EHOXDKVWTQ55PH2EOYCQW2QB2DPA
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/QuickSearch.sgmodule?token=GHSAT0AAAAAAD3EHOXCRWP637LJBWIPLA3A2QB2DVQ
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/RedPaper_remove_ads.sgmodule?token=GHSAT0AAAAAAD3EHOXC5G5DWX7HMTKJSHXG2QB2D4A
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/Taobao_remove_ads.sgmodule?token=GHSAT0AAAAAAD3EHOXCP2ZY5U7VMXEHGNZM2QB2EDA
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/TongHuaShun.sgmodule?token=GHSAT0AAAAAAD3EHOXCW33X6SXTYF6VUDPQ2QB2EJQ
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/Umetrip.sgmodule?token=GHSAT0AAAAAAD3EHOXDWST2BJONAZPVOH7Y2QB2ERQ
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/WeixinMiniPrograms_Remove_ads.sgmodule?token=GHSAT0AAAAAAD3EHOXDVF6EEZLNPOL4IKG42QB2E2Q
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/Weixin_Official_Accounts_remove_ads.sgmodule?token=GHSAT0AAAAAAD3EHOXCL5F5FQU7SJSD2CUY2QB2FBQ
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/Weixin_external_links_unlock.sgmodule?token=GHSAT0AAAAAAD3EHOXCPVBKSFNBZJTJRSNQ2QB2FIQ
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/XiaoHeiHe_remove_ads.sgmodule?token=GHSAT0AAAAAAD3EHOXCQ7HANAEUX43PKGI42QB2FRA
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/YouTubeSubtitlesTranslation.sgmodule?token=GHSAT0AAAAAAD3EHOXCX6VQZEV24KSKFYJI2QB2FYA
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/YouTube_remove_ads.sgmodule?token=GHSAT0AAAAAAD3EHOXCU5WMX6ZRNVGGMOCQ2QB2F7Q
+https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/modules/Zhihu_remove_ads.sgmodule?token=GHSAT0AAAAAAD3EHOXCEXH3YHEQRIFIBYXK2QB2GGQ
