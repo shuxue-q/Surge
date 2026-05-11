@@ -1,0 +1,16 @@
+#!name=同花顺去推荐广告
+#!desc=2026-04-30更新-去除同花顺推荐广告
+#!category=Androidcn[https://github.com/androidcn]
+#!icon=https://raw.githubusercontent.com/shuxue-q/loon/main/icon/tonghuashun.png
+
+[Script]
+http-response ^https:\/\/recommend\.10jqka\.com\.cn\/app\/discover\/api\/v1\/recommend script-path=https://raw.githubusercontent.com/androidcn/userscripts/main/tonghuashun.js, requires-body=true, timeout=60, tag=THSblockAD
+png
+
+[Rewrite]
+#同花顺
+^https?:\/\/adm\.10jqka\.com\.cn\/interface\/ad\/recommend - reject
+^https:\/\/c\.10jqka\.com\.cn\/lgt\/common2c\/auth\/api\/ad_recommend\/v1\/comment_ad_recommend - reject-dict
+
+[MITM]
+hostname = recommend.10jqka.com.cn,c.10jqka.com.cn
