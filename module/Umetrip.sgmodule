@@ -14,7 +14,7 @@ URL-REGEX,"^https?:\/\/oss\.umetrip\.com(\.cn)?\/fs\/advert\/polite",REJECT
 
 [Script]
 # 移除首页信息流广告及应用内其他弹窗
-航旅纵横去广告 = type=http-request, pattern=^https?:\/\/(114\.115\.217\.129|([a-z0-9-]+\.)?umetrip\.com(\.cn)?)\/gateway\/api\/umetrip\/native$, script-path=https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/Scripts/umetrip_ads.js, requires-body=true, timeout=10
+航旅纵横去广告 = type=http-request, pattern=^https?:\/\/(114\.115\.217\.129|([a-z0-9-]+\.)?umetrip\.com(\.cn)?)\/gateway\/api\/umetrip\/native$, script-path=https://raw.githubusercontent.com/shuxue-q/Surge/refs/heads/main/Scripts/umetrip_remove_ads.js requires-body=true, timeout=10
 
 [MITM]
 hostname = %APPEND% 114.115.217.129, *.umetrip.com, *.umetrip.com.cn
