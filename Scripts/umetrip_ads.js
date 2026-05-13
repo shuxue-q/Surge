@@ -1,16 +1,18 @@
+// 获取请求头中的 rpid
 const rpid = $request.headers.rpid || $request.headers.Rpid;
 
+// 检查是否包含广告对应的 rpid
 if (rpid && (rpid.includes("1000002") || rpid.includes("1000019"))) {
-    // 兼容 Surge、Loon、QX 的写法
-    // 1. 如果在 Surge 环境，推荐直接返回空数据，而不是玩 404 状态码
-    if (typeof $httpClient !== "undefined") {
-        // Surge 环境：直接清空响应体，让 APP 拿到一个空的 JSON 从而不渲染酒店
-        $done({ body: JSON.stringify({ obj: null, code: 200, msg: "success" }) });
-    } else {
-        // Loon / QX 环境：保持原作者的强力 404 拦截
-        $done({ status: "HTTP/1.1 404 Not Found", body: "" });
-    }
+    // 拦截请求，直接向 APP 返回 204 No Content
+    // 这会告诉 APP 网络请求完成了，但没有数据。APP 不会去触发 Protobuf 解析，从而避免报错弹窗。
+    $done({
+        response: {
+            status: 204,
+            headers: {},
+            body: ""
+        }
+    });
 } else {
-    // 放行其他正常请求
+    // 不是广告请求，正常放行
     $done({});
 }
