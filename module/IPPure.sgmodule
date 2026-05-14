@@ -1,6 +1,6 @@
 #!name=IP-Pure
 #!desc=节点 IP 纯净度检测（IPPure）,请先在参数内选择策略组。
-#!category=功能增强
+#!category=面板
 #!arguments=Proxy:DIRECT,MarkIP:false
 #!arguments-desc=Proxy: 选择策略组,默认DIRECT. @from wish | MarkIP: IP 打码(true/false),默认 false
 
