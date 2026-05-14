@@ -1,2 +1,2 @@
-DOMAIN, ca.iadsdk.apple.com, REJECT
-DOMAIN, dataflow.biliapi.com, REJECT
+DOMAIN, ca.iadsdk.apple.com
+DOMAIN, dataflow.biliapi.com
