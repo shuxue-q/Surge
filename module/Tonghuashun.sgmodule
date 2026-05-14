@@ -1,7 +1,9 @@
-#!name=同花顺去推荐广告
-#!desc=2026-04-30更新-去除同花顺推荐广告
+#!name=同花顺去广告
+#!desc=去除同花顺推荐广告
+#!date=2026-04-50
 #!icon=https://raw.githubusercontent.com/shuxue-q/loon/main/icon/tonghuashun.png
-#!category=Androidcn[https://github.com/androidcn]
+#!author=Androidcn[https://github.com/androidcn]
+#!category=去广告
 
 [URL Rewrite]
 #同花顺
