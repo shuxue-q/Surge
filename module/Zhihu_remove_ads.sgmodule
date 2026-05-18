@@ -9,22 +9,22 @@
 #!date=2026-02-22 03:17:55
 
 [Rule]
-DOMAIN,appcloud.zhihu.com,REJECT
-DOMAIN,appcloud2.in.zhihu.com,REJECT
-DOMAIN,crash2.zhihu.com,REJECT
-DOMAIN, lens.zhihu.com, REJECT
+DOMAIN,appcloud.zhihu.com,REJECT-DROP
+DOMAIN,appcloud2.in.zhihu.com,REJECT-DROP
+DOMAIN,crash2.zhihu.com,REJECT-DROP
+DOMAIN, lens.zhihu.com, REJECT-DROP
 
-DOMAIN,mqtt.zhihu.com,REJECT
-DOMAIN,sugar.zhihu.com,REJECT
-DOMAIN,zxid-m.mobileservice.cn,REJECT
-IP-CIDR,103.41.167.237/32,REJECT,no-resolve
-IP-CIDR,118.89.204.198/32,REJECT,no-resolve
-IP-CIDR,182.61.194.7/32,REJECT,no-resolve
-IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,REJECT,no-resolve
+DOMAIN,mqtt.zhihu.com,REJECT-DROP
+DOMAIN,sugar.zhihu.com,REJECT-DROP
+DOMAIN,zxid-m.mobileservice.cn,REJECT-DROP
+IP-CIDR,103.41.167.237/32,REJECT-DROP,no-resolve
+IP-CIDR,118.89.204.198/32,REJECT-DROP,no-resolve
+IP-CIDR,182.61.194.7/32,REJECT-DROP,no-resolve
+IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,REJECT-DROP,no-resolve
 
 [URL Rewrite]
-^https:\/\/api\.zhihu\.com\/unlimited\/go\/my_card - reject
-^https:\/\/www\.zhihu\.com\/appview\/v3\/zhmore - reject
+^https:\/\/api\.zhihu\.com\/unlimited\/go\/my_card - REJECT-DROP
+^https:\/\/www\.zhihu\.com\/appview\/v3\/zhmore - REJECT-DROP
 ^https:\/\/link\.zhihu\.com\/\?target=(?:https?)?(?:%3A|:)?(?:\/\/|%2F%2F)?(.*) http://$1 302
 
 [Body Rewrite]
