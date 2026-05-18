@@ -9,14 +9,14 @@
 #!date=2026-02-22 03:17:55
 
 [Rule]
-DOMAIN,appcloud.zhihu.com,REJECT-DROP
-DOMAIN,appcloud2.in.zhihu.com,REJECT-DROP
-DOMAIN,crash2.zhihu.com,REJECT-DROP
-DOMAIN, lens.zhihu.com, REJECT-DROP
+DOMAIN,appcloud.zhihu.com,REJECT-DROP,extended-matching
+DOMAIN,appcloud2.in.zhihu.com,REJECT-DROP,extended-matching
+DOMAIN,crash2.zhihu.com,REJECT-DROP,extended-matching
+DOMAIN, lens.zhihu.com, REJECT-DROP,extended-matching
 
-DOMAIN,mqtt.zhihu.com,REJECT-DROP
-DOMAIN,sugar.zhihu.com,REJECT-DROP
-DOMAIN,zxid-m.mobileservice.cn,REJECT-DROP
+DOMAIN,mqtt.zhihu.com,REJECT-DROP,extended-matching
+DOMAIN,sugar.zhihu.com,REJECT-DROP,extended-matching
+DOMAIN,zxid-m.mobileservice.cn,REJECT-DROP,extended-matching
 IP-CIDR,103.41.167.237/32,REJECT-DROP,no-resolve
 IP-CIDR,118.89.204.198/32,REJECT-DROP,no-resolve
 IP-CIDR,182.61.194.7/32,REJECT-DROP,no-resolve
