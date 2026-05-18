@@ -9,12 +9,12 @@
 #!date=2025-10-02 21:29:46
 
 [Rule]
-DOMAIN,wxsnsdy.wxs.qq.com,REJECT
-DOMAIN,wxsmsdy.video.qq.com,REJECT
-DOMAIN,wxsnsdythumb.wxs.qq.com,REJECT
-DOMAIN,ads-shopping.shouqianba.com,REJECT
-DOMAIN,ad.maoyan.com,REJECT
-DOMAIN,e.jparking.cn,REJECT
+DOMAIN,wxsnsdy.wxs.qq.com,REJECT,extended-matching
+DOMAIN,wxsmsdy.video.qq.com,REJECT,extended-matching
+DOMAIN,wxsnsdythumb.wxs.qq.com,REJECT,extended-matching
+DOMAIN,ads-shopping.shouqianba.com,REJECT,extended-matching
+DOMAIN,ad.maoyan.com,REJECT,extended-matching
+DOMAIN,e.jparking.cn,REJECT,extended-matching
 
 [URL Rewrite]
 ^https:\/\/webapi\.qmai\.cn\/web\/cmk-center\/marketing\/canvas\/advert-reach - reject
