@@ -9,9 +9,9 @@
 #!date=2026-03-10 19:47:26
 
 [Rule]
-DOMAIN,amap-aos-info-nogw.amap.com,REJECT
-DOMAIN,free-aos-cdn-image.amap.com,REJECT
-DOMAIN-SUFFIX,v.smtcdns.com,REJECT
+DOMAIN,amap-aos-info-nogw.amap.com,REJECT,extended-matching
+DOMAIN,free-aos-cdn-image.amap.com,REJECT,extended-matching
+DOMAIN-SUFFIX,v.smtcdns.com,REJECT,extended-matching
 
 [Body Rewrite]
 http-response-jq ^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/marketingOperationStructured\? 'delpaths([["data","commonMaterial"]])'
