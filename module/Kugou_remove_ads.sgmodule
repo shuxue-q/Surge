@@ -9,14 +9,14 @@
 #!date=2025-05-13 15:17:08
 
 [Rule]
-DOMAIN,ads.service.kugou.com,REJECT
-DOMAIN,adstats.tencentmusic.com,REJECT
-DOMAIN,adsmind.gdtimg.com,REJECT
-DOMAIN,adserviceretry.kugou.com,REJECT
-DOMAIN,adserviceretry.kglink.cn,REJECT
-DOMAIN,ad.tencentmusic.com,REJECT
-DOMAIN,adservice.kugou.com,REJECT
-DOMAIN,splashimgretrybssdl.cloud.kugou.com,REJECT
+DOMAIN,ads.service.kugou.com,REJECT-DROP,extended-matching,pre-matching
+DOMAIN,adstats.tencentmusic.com,REJECT-DROP,extended-matching,pre-matching
+DOMAIN,adsmind.gdtimg.com,REJECT-DROP,extended-matching,pre-matching
+DOMAIN,adserviceretry.kugou.com,REJECT-DROP,extended-matching,pre-matching
+DOMAIN,adserviceretry.kglink.cn,REJECT-DROP,extended-matching,pre-matching
+DOMAIN,ad.tencentmusic.com,REJECT-DROP,extended-matching,pre-matching
+DOMAIN,adservice.kugou.com,REJECT-DROP,extended-matching,pre-matching
+DOMAIN,splashimgretrybssdl.cloud.kugou.com,REJECT-DROP,extended-matching,pre-matching
 URL-REGEX,"^http:\/\/log\.stat\.kugou\.com\/mobile\/ad\.html",REJECT
 
 [Body Rewrite]
